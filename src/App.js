@@ -1,11 +1,22 @@
 import React from 'react';
-
+import { Outlet } from 'react-router-dom';
+import Navigation from './components/Nav';
+import { CredentialsContextProvider } from './contexts/current-user-context';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <CredentialsContextProvider>
+      <div style={{
+        maxWidth: '1000px',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+      }}
+        className="App"
+      >
+        <Navigation />
+        <Outlet />
+      </div>
+    </CredentialsContextProvider>
   );
 }
 
