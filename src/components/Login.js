@@ -5,14 +5,11 @@ import styled from 'styled-components';
 import { useCredentialsContext } from '../contexts/current-user-context';
 
 const FormWrapper = styled.div`
-  /* border: solid;
-  border-width: 1px; */
   width: 50%;
   padding: 0;
 `
 
 const Login = () => {
-
   const { setUsername, setPassword } = useCredentialsContext()
 
   const navigate = useNavigate();
