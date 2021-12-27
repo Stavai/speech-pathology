@@ -4,6 +4,7 @@ import { useCredentialsContext } from '../contexts/current-user-context';
 
 const Game = () => {
   const { username, password } = useCredentialsContext();
+  console.log({ username, password })
 
   const [counter, setCounter] = useState(60);
   const [stopped, setStopped] = useState(false)
